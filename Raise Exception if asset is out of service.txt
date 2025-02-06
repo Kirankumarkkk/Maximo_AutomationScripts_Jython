@@ -1,0 +1,9 @@
+### Prevent Work Order Status Change If Asset is Out of Service
+
+from psdi.util import MXApplicationException
+
+assetSet = mbo.getMboSet("ASSET")
+asset = assetSet.getMbo(0)
+
+if asset and asset.getString("STATUS") == "DECOMMISSIONED":
+    raise MXApplicationException("customerrorgroup", "assetoutofservice")

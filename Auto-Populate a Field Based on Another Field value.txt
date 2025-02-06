@@ -1,0 +1,8 @@
+## Auto-Populate a Field Based on Another Field's Value
+
+category = mbo.getString("CATEGORY")
+
+if category == "ELECTRICAL":
+    mbo.setValue("WORKTYPE", "ELEC", MboConstants.NOACCESSCHECK)
+elif category == "MECHANICAL":
+    mbo.setValue("WORKTYPE", "MECH", MboConstants.NOACCESSCHECK)
