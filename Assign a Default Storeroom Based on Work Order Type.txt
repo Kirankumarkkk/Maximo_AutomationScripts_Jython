@@ -1,0 +1,8 @@
+## Assign a Default Storeroom Based on Work Order Type
+
+woType = mbo.getString("WORKTYPE")
+
+if woType == "REPAIR":
+    mbo.setValue("STOREROOM", "REPAIR-STOR", MboConstants.NOACCESSCHECK)
+elif woType == "INSPECTION":
+    mbo.setValue("STOREROOM", "INSPECT-STOR", MboConstants.NOACCESSCHECK)

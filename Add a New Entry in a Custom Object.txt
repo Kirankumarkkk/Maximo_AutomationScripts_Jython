@@ -1,0 +1,7 @@
+## Add a New Entry in a Custom Object
+
+customSet = mbo.getMboSet("MYCUSTOMOBJECT")
+newEntry = customSet.add()
+
+newEntry.setValue("CUSTOMFIELD", "New Entry", MboConstants.NOACCESSCHECK)
+customSet.save()

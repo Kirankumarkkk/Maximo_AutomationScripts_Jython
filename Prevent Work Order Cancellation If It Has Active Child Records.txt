@@ -1,0 +1,8 @@
+## Prevent Work Order Cancellation If It Has Active Child Records
+
+from psdi.util import MXApplicationException
+
+childSet = mbo.getMboSet("WOCHILDREN")
+
+if not childSet.isEmpty():
+    raise MXApplicationException("customerrorgroup", "cannotcancelwithchildren")

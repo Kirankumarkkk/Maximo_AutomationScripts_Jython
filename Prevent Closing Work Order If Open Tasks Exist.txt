@@ -1,0 +1,11 @@
+##Prevent Closing Work Order If Open Tasks Exist
+
+from psdi.util import MXApplicationException
+
+taskSet = mbo.getMboSet("WOTASKS")
+task = taskSet.moveFirst()
+
+while task:
+    if task.getString("STATUS") != "COMP":
+        raise MXApplicationException("customerrorgroup", "tasksnotcompleted")
+    task = taskSet.moveNext()

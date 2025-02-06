@@ -1,0 +1,4 @@
+## Automatically Populate a Description When a Record Is Created
+
+if mbo.isNew():
+    mbo.setValue("DESCRIPTION", "New Service Request", MboConstants.NOACCESSCHECK)

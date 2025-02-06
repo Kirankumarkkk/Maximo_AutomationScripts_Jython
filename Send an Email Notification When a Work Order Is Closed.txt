@@ -1,0 +1,10 @@
+## Send an Email Notification When a Work Order Is Closed
+
+from psdi.server import MXServer
+
+mxServer = MXServer.getMXServer()
+email = "user@example.com"
+subject = "Work Order Closed"
+body = "Your Work Order has been closed successfully."
+
+mxServer.sendEMail(email, subject, body, None, "SMTP")

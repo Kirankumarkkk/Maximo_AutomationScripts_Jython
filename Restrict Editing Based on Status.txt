@@ -1,0 +1,6 @@
+## Restrict Editing Based on Status
+
+from psdi.util import MXApplicationException
+
+if mbo.getString("STATUS") == "COMP":
+    raise MXApplicationException("customerrorgroup", "cannoteditcompleted")
