@@ -1,0 +1,7 @@
+## Copy Parent Work Order Data to a Task
+
+parentWO = mbo.getOwner()
+
+if parentWO:
+    mbo.setValue("DESCRIPTION", parentWO.getString("DESCRIPTION"), MboConstants.NOACCESSCHECK)
+    mbo.setValue("LOCATION", parentWO.getString("LOCATION"), MboConstants.NOACCESSCHECK)

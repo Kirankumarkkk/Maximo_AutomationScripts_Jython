@@ -1,0 +1,9 @@
+## Validate That a Location Exists Before Assigning It
+
+from psdi.util import MXApplicationException
+
+location = mbo.getString("LOCATION")
+locSet = mbo.getMboSet("$LOC", "LOCATIONS", "location = '{}'".format(location))
+
+if locSet.isEmpty():
+    raise MXApplicationException("customerrorgroup", "invalidlocation")

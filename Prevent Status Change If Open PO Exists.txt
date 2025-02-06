@@ -1,0 +1,8 @@
+## Prevent Status Change If Open PO Exists
+
+from psdi.util import MXApplicationException
+
+poSet = mbo.getMboSet("PURCHASEORDER")
+
+if not poSet.isEmpty():
+    raise MXApplicationException("customerrorgroup", "openpospreventstatuschange")
