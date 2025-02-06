@@ -1,0 +1,4 @@
+## Get the Old Value of a Field Before It Changes
+
+oldPriority = mbo.getMboValue("PRIORITY").getPreviousValue().asString()
+print("Previous Priority: " + oldPriority)

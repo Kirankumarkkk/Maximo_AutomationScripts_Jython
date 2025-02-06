@@ -1,0 +1,8 @@
+## Fetch and Print Related Records in a Loop
+
+relatedSet = mbo.getMboSet("RELATEDRECORDS")
+
+related = relatedSet.moveFirst()
+while related:
+    print("Related Record: " + related.getString("TICKETID"))
+    related = relatedSet.moveNext()

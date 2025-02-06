@@ -1,0 +1,8 @@
+## Prevent Work Order Approval If No Assigned Labor
+
+from psdi.util import MXApplicationException
+
+laborSet = mbo.getMboSet("WOLABOR")
+
+if laborSet.isEmpty():
+    raise MXApplicationException("customerrorgroup", "nolaborassigned")

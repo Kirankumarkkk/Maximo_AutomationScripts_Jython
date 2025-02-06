@@ -1,0 +1,7 @@
+## Fetch a Single Record from a Related Table
+
+assetSet = mbo.getMboSet("ASSET")
+asset = assetSet.getMbo(0)
+
+if asset:
+    print("Asset Number: " + asset.getString("ASSETNUM"))

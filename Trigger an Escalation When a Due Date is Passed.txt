@@ -1,0 +1,7 @@
+## Trigger an Escalation When a Due Date is Passed
+
+from java.util import Date
+from psdi.mbo import MboConstants
+
+if mbo.getDate("TARGCOMPDATE") and mbo.getDate("TARGCOMPDATE").before(Date()):
+    mbo.changeStatus("OVERDUE", MboConstants.NOACCESSCHECK, Date(), "Escalation triggered")

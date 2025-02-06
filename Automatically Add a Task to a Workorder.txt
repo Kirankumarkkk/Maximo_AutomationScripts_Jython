@@ -1,0 +1,9 @@
+## Automatically Add a Task to a Work Order
+
+taskSet = mbo.getMboSet("WOTASKS")
+newTask = taskSet.add()
+
+newTask.setValue("DESCRIPTION", "Inspection Task", MboConstants.NOACCESSCHECK)
+newTask.setValue("DURATION", 2, MboConstants.NOACCESSCHECK)
+
+taskSet.save()

@@ -1,0 +1,8 @@
+##Auto-Assign a Supervisor Based on Location
+
+location = mbo.getString("LOCATION")
+
+if location.startswith("PLANT"):
+    mbo.setValue("SUPERVISOR", "PLANTSUP", MboConstants.NOACCESSCHECK)
+elif location.startswith("OFFICE"):
+    mbo.setValue("SUPERVISOR", "OFFICESUP", MboConstants.NOACCESSCHECK)

@@ -1,0 +1,7 @@
+## Ensure That a Work Order Has a Valid Supervisor
+
+from psdi.util import MXApplicationException
+
+supervisor = mbo.getString("SUPERVISOR")
+if not supervisor:
+    raise MXApplicationException("customerrorgroup", "supervisorrequired")
